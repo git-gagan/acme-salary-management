@@ -11,7 +11,9 @@ export default function EmployeeDirectory() {
     setLoading(true);
     const offset = page * limit;
     // We will build this backend endpoint next
-    axios.get(`http://localhost:8000/employees?limit=${limit}&offset=${offset}`)
+    // axios.get(`http://localhost:8000/employees?limit=${limit}&offset=${offset}`)
+    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    axios.get(`${API_BASE_URL}/employees...`)
       .then(response => {
         setEmployees(response.data);
         setLoading(false);

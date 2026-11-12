@@ -8,7 +8,9 @@ export default function Analytics() {
 
   useEffect(() => {
     // We will build this backend endpoint next
-    axios.get('http://localhost:8000/analytics/salaries-by-department')
+    // axios.get('http://localhost:8000/analytics/salaries-by-department')
+    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    axios.get(`${API_BASE_URL}/employees...`)
       .then(response => {
         setData(response.data);
         setLoading(false);
