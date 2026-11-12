@@ -10,7 +10,7 @@ export default function Analytics() {
     // We will build this backend endpoint next
     // axios.get('http://localhost:8000/analytics/salaries-by-department')
     const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-    axios.get(`${API_BASE_URL}/employees...`)
+    axios.get(`${API_BASE_URL}/analytics/salaries-by-department`)
       .then(response => {
         setData(response.data);
         setLoading(false);
